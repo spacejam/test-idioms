@@ -31,16 +31,16 @@ add conditional compilation to the production code, or relying on deeply nested 
 │   │   └── my_fuzz_target
 │   │       └── (fuzzing corpus accumulates here)
 │   └── fuzz_targets
-│       └── my_fuzz_target.rs
+│       └── my_fuzz_target.rs                       <- fuzz test
 ├── shared_correctness_logic
 │   ├── Cargo.lock
 │   ├── Cargo.toml
 │   └── src
-│       └── lib.rs
+│       └── lib.rs                                  <- shared externally visible testing concerns
 ├── src
 │   ├── bin
-│   │   └── my_binary.rs
-│   └── lib.rs
+│   │   └── my_binary.rs                            <- business logic binary
+│   └── lib.rs                                      <- business logic code
 └── tests
-    └── proptest.rs
+    └── proptest.rs                                 <- proptest
 ```
