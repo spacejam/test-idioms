@@ -1,0 +1,10 @@
+[package]
+name = "shared_correctness_logic"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+arbitrary = { version = "1.3.0", features = ["derive"] }
+my-crate = { path = ".." }
+proptest = "1.2.0"
+proptest-derive = "0.3.0"
